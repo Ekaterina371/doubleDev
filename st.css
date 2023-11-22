@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    z-index: 1;
+}
+.logo {
+    margin-top: 0.3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.navItem {
+    display: flex;
+}
+.navItem li {
+    list-style: none;
+    margin: 0 15px;
+}
+.navItem li a {
+    font-size: 20px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navItem li:hover a {
+    color: #7f00ff;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+}
+
+a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+
+
+@media only screen and (max-width: 748px) {
+    body {
+        overflow: auto;
+    }
+
+    .loader-container {
+        background-color: rgba(246, 245, 245, 0.9); /* Adjusted background color for smaller screens */
+    }
+
+    .loader {
+        border: 6px solid #f3f3f3; /* Adjusted border size for smaller screens */
+        border-top: 6px solid #d834db; /* Adjusted border size for smaller screens */
+        width: 40px; /* Adjusted width for smaller screens */
+        height: 40px; /* Adjusted height for smaller screens */
+    }
+
+    .menu-toggle span {
+        height: 3px;
+        width: 50px;
+        background-color: rgb(12, 1, 1);
+        margin: 4px 0;
+        margin-right: 50px;
+        display: block;
+    }
+    .menu-toggle {
+        display: flex;
+        margin-top: 5%;
+        margin-left: 27%;
+    }
+
+    .navItem {
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: -47%;      
+        background-color: #f8f6f6;
+       
+    }
+
+    .navItem.show {
+        display: flex;
+    }
+
+    .navItem li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .imgresp {
+        background-image: url("img/10.svg");
+        margin-top: 4%;
+        margin-left: 3%;
+        height: 110vh;
+        z-index: 1;
+        background-repeat: no-repeat;
+    }
+
+    .p {
+        width: 170%;
+        font-size: 1.1em;
+        margin-top: 8%;
+        margin-bottom: 10%;
+    }
+
+    .wrapper {
+        margin-top: -18%;
+    }
+
+    #wrapper {
+        height: calc(100vh);
+    } 
+
+    .h1 {
+        font-size: 2.5em;
+    }
+
+    #multiText {
+        font-size: 0.9em;
+    }
+
+    .btn1 {
+        font-size: 0.9em;
+        margin-left: -96%;
+    }
+
+    .btn2 {
+        font-size: 0.9em;
+        margin-left: 0%;
+        padding-top: 5%;
+    }
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+.wrapper::after {
+    position: absolute;
+    content: '';
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 23%;
+    top: 12%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object2 6s linear infinite;
+}
+@keyframes object1 {
+    50% {
+        left: -13%;
+        top: 32%;
+    }
+}
+@keyframes object2 {
+    50% {
+        left: 35%;
+        top: 12%;
+    }
+}
+
+@media only screen and (max-device-width:  900px) {
+    .wrapper::before{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        left: 40%;
+        top: 80%;
+        animation: object1 12s linear infinite;
+    }
+    .wrapper::after {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        left: 63%;
+        top: 40%;
+        animation: object2 12s linear infinite;
+    }
+    @keyframes object1 {
+        50% {
+            left: 20%;
+            top: 92%;
+        }
+    }
+    @keyframes object2 {
+        50% {
+            left: 15%;
+            top: 12%;
+        }
+    }
+}
+
+.cols {
+    width: 50%;
+}
+.cols0 {
+    z-index: 0;
+}
+.topline {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+}
+.topline::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color:  #7f00ff;
+}
+h1 {
+    display: block;
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 100px;
+    color: #3d535f;
+}
+.multiText {
+    color: #7f00ff;
+    font-size: 92px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+p {
+    display: block;
+    width: 70%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+.btns {
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+}
+button:hover {
+   background-color: #7f00ff; 
+}
+.imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img {
+    height: 100%;
+    width: calc(130% - 80px);
+    margin-top: 0%;
+    padding-left: 45%;
+    
+}
+.imgbox img:hover {
+    transform: translateX(5%) rotate(5deg); /* Используем те же значения, что и в keyframes */
+}
+@keyframes animateUser {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(5%) rotate(5deg);
+    }
+    75% {
+        transform: translateX(-5%) rotate(-5deg);
+    }
+}
+
+.imgbox #splash {
+   
+    transition: transform 2s ease-in-out;
+}
+@keyframes animate {
+    50% {
+        left: 51px;
+        top: 49px;
+        width: 135%;
+    }
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(246, 245, 245, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #d834db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+

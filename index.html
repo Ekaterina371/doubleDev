@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="st.css">
+        <title>DoubleDev</title>
+       
+        
+    </head>
+    <body>
+        <div class="loader-container" id="loader">
+            <div class="loader"></div>
+        </div>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/Logo.png">
+                </div>
+            
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            
+                <ul class="navItem">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages.html">About</a></li>
+                    <li><a href="pages.html">Skills</a></li>
+                    <li><a href="pages.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="imgresp"></div>
+            <div class="wrapper" id="wrapper">
+                <div class="cols cols0">
+                    <span class="topline">Hello</span>
+                    <h1 class="h1">We're <span class="multiText" id="multiText">Coders</span></h1>
+                    <p class="p">Meet DoubleDev: two girls mastering HTML, CSS, and JavaScript with big dreams of tech job offers. Follow our coding journey as ambition turns into expertise!</p>
+                        <div class="btns">
+                            <a href="https://drive.google.com/file/d/1z4nZVI8cgPqi1ygoEVdxTo7FMNJZ4fqT/view?usp=sharing" download="DoubleDuo_CVs.pdf"><button class="btn1">downloand CVs</button></a>
+                            <a href ="https://rabota.by"><button class="btn2" >hire us</button></a>
+                        </div>
+                </div>
+                    <div class="cols cols1">
+                        <div class="imgbox">
+                            <img class="img" src="img/Realistic ID Cards1.svg" id="splash">
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="new.js"></script>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script>
+                var typingEffect = new Typed(".multiText",{
+                    strings : ["Designers","QAs"],
+                    loop : true,
+                    typeSpeed : 160,
+                    backSpeed : 150,
+                    backDelay : 1500
+                })
+            </script>
+
+        <script>
+            window.addEventListener("load", function () {
+                var loader = document.getElementById("loader");
+                loader.style.display = "none";
+            });
+        </script>
+
+
+    </body>
+    </html>
